@@ -9,4 +9,6 @@ go install github.com/hakluke/hakfindinternaldomains
 
 # Usage
 
+```
 cat subdomains.txt | hakfindinternaldomains -t 50
+```

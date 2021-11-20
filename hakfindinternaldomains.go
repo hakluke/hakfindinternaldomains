@@ -45,6 +45,9 @@ func doWork(work chan string, wg *sync.WaitGroup, cidrs [3]net.IPNet) {
 			log.Println("DNS resolve failed:", err)
 		}
 		for _, cidr := range cidrs {
+			if len(ip) == 0 {
+				continue
+			}
 			if cidr.Contains(ip[0]) {
 				fmt.Println(text, ip)
 			}
